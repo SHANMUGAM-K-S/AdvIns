@@ -1,0 +1,776 @@
+.intro img {
+    height: 700px;
+    width: auto;
+    margin-top: 70px;
+}
+
+.texts {
+    margin-left: 50px;
+    margin-top: 50px;
+    color: white;
+    height: 90%;
+    background-size: 400% 400%;
+}
+
+.texts h1 {
+    margin-right: 20px;
+}
+
+.text-image-mask {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6rem;
+    font-weight: bold;
+    text-align: center;
+    background-image: url('https://media1.giphy.com/media/XHkQUuliDUOSqM4hto/200w.gif?cid=6c09b952guut9lifsxmqocjojzjgp9phbn3clto9rcvoa3bz&ep=v1_gifs_search&rid=200w.gif&ct=g');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+/* .text-image-mask.blast {
+    transform: scale(3) rotate(900deg);
+    opacity: 0;
+} */
+
+.texts h1::selection {
+    background: rgb(233, 88, 5);
+    color: white;
+}
+
+
+
+/*  */
+
+.heading h1 {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 50px;
+}
+
+
+.about-section {
+    padding-left: 10%;
+    display: flex;
+    padding-right: 8%;
+    margin-top: -40px;
+    background: rgb(249, 245, 245);
+    border-radius: 10px;
+}
+
+/* .about-section:active {
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/019/666/018/original/matthew-harris-edwards-lightning-flashes.gif?1564501434);
+    color: white;
+} */
+
+.about-section h3 {
+    font-size: 3rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(12, 12, 91);
+    margin-bottom: 40px;
+}
+
+
+
+.about-section strong {
+    color: rgb(11, 11, 189);
+    font-size: 18px;
+}
+
+
+
+.about-section p {
+    padding: 1rem;
+    max-width: 500px;
+    font-size: 17px;
+    color: rgb(63, 59, 59);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.about-section .text-section {
+    opacity: 0;
+    transform: translateX(-400px);
+    transition: all 1s ease-in-out;
+}
+
+.about-section .image-section {
+    /* transform: translateX(400px); */
+    margin-left: 220px;
+    margin-top: 150px;
+    transition: all 1s ease-in-out;
+}
+
+.image-section img {
+    height: 500px;
+    width: 450px;
+    border-top-left-radius: 60%;
+    border-bottom-left-radius: 60%;
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.text-section.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image-section.in-view {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.vision img {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* team experts page */
+.our-team {
+    border: 3px solid rgb(17, 6, 135);
+    margin: 20px;
+    height: 95vh;
+}
+
+.about-team {
+    display: flex;
+    flex-direction: column;
+}
+
+.team h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+}
+
+.team p {
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*  */
+.experts {
+    display: flex;
+    flex-direction: row;
+}
+
+/* left side image */
+.expertise {
+    margin-top: 25px;
+    text-align: center;
+    margin-left: 200px;
+}
+
+.expertise img {
+    border: 5px solid darkblue;
+    height: 220px;
+    width: 370px;
+    margin-bottom: -15px;
+}
+
+.expertise h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+
+.expertise p {
+    width: 450px;
+    text-align: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* right side image */
+
+.expertises {
+    margin-top: 25px;
+    text-align: center;
+    margin-right: 200px;
+}
+
+.expertises p {
+    width: 450px;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+.expertises h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+}
+
+.expertises img {
+    border: 5px solid darkblue;
+    height: 220px;
+    width: 370px;
+    margin-bottom: -15px;
+}
+
+/* arrow */
+
+.buttonn {
+    position: fixed;
+    bottom: 3%;
+    right: 1%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: red;
+    z-index: 9999;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buttonn:hover {
+    opacity: 1;
+}
+
+
+@media (max-width:1300px) {
+    .button {
+        position: fixed;
+        bottom: 3%;
+        right: 1%;
+        padding: 8px 15px;
+        opacity: 0.4;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .button:hover {
+        opacity: 1;
+    }
+
+    .intro {
+        height: 680px;
+    }
+
+    .texts h1 {
+        margin-top: 100px;
+    }
+
+    .text-image-mask {
+        font-size: 4rem;
+        margin-top: 50px;
+    }
+
+    .about-section h3 {
+        margin-bottom: 5px;
+        margin-left: 15px;
+    }
+
+    .about-section p {
+        width: 500px;
+        font-size: 15px;
+    }
+
+    .image-section img {
+        height: 400px;
+        width: 400px;
+        margin-left: -50px;
+    }
+
+    /* our team section */
+    .our-team {
+        height: auto;
+    }
+
+    .team h1 {
+        font-size: 4rem;
+        margin-top: 5px;
+        color: rgb(1, 1, 63);
+    }
+
+    .team p {
+        font-size: 16px;
+        margin-top: -15px;
+    }
+
+    .expertise {
+        margin-left: 80px;
+    }
+
+    .expertises {
+        margin-right: 50px;
+    }
+}
+
+@media (max-width:1030px) {
+    .buttonn {
+        opacity: 0.5;
+        position: fixed;
+        bottom: 3%;
+        right: 1%;
+        padding: 7px 13px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .buttonn:hover {
+        opacity: 1;
+    }
+
+    .intro {
+        height: 550px;
+    }
+
+    .text-image-mask {
+        font-size: 2.7rem;
+        margin-top: -20px;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        padding: 0 5%;
+    }
+
+    .about-section h3 {
+        font-size: 2.2rem;
+    }
+
+    .about-section p {
+        width: 400px;
+        max-width: 800px;
+        padding: 15px;
+    }
+
+    .image-section img {
+        height: 400px;
+        width: 380px;
+        margin-left: -120px;
+        margin-top: -20px;
+    }
+
+    /*  */
+    /* our team */
+    .our-team {
+        height: auto;
+    }
+
+    .team h1 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: -15px;
+    }
+
+    .team p {
+        padding: 5px 3%;
+        font-size: 17px;
+    }
+
+    .experts {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .expertise img {
+        height: 150px;
+        width: 230px;
+    }
+
+    .expertises img {
+        height: 150px;
+        width: 230px;
+    }
+
+    .expertise h3 {
+        font-size: 18px;
+    }
+
+    .expertise p {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 400px;
+        padding: 0 2%;
+    }
+
+    .expertises p {
+        font-size: 12px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 400px;
+
+    }
+
+    .expertises h3 {
+        font-size: 18px;
+    }
+
+}
+
+@media (max-width:830px) {
+    .buttonn {
+        opacity: 0.5;
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        padding: 6px 12px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .buttonn:hover {
+        opacity: 1;
+    }
+
+    .intro {
+        height: 600px;
+    }
+
+    .text-image-mask {
+        font-size: 2.8rem;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-section h3 {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+
+    .about-section p {
+        width: auto;
+        max-width: 800px;
+        padding: 15px;
+    }
+
+    .image-section img {
+        height: 500px;
+        width: 520px;
+        margin-left: -120px;
+        margin-top: -120px;
+    }
+
+    /*  */
+    /* our team */
+    .our-team {
+        height: auto;
+    }
+
+    .team h1 {
+        text-align: center;
+        font-size: 38px;
+    }
+
+    .team p {
+        padding: 0 3%;
+        font-size: 17px;
+    }
+
+    .experts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expertise img {
+        height: 230px;
+        margin-right: 70px;
+        width: 420px;
+        margin-top: -20px;
+    }
+
+    .expertises img {
+        height: 230px;
+        margin-left: 70px;
+        margin-top: -30px;
+        width: 420px;
+    }
+
+    .expertise h3 {
+        font-size: 24px;
+        margin-left: -100px;
+    }
+
+    .expertise p {
+        font-size: 17px;
+        margin-right: 50px;
+        margin-top: -15px;
+        padding: 0 5%;
+        font-family: Arial, Helvetica, sans-serif;
+        width: auto;
+    }
+
+    .expertises p {
+        font-size: 17px;
+        margin-left: 50px;
+        padding: 0 5%;
+        margin-top: -15px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: auto;
+
+    }
+
+    .expertises h3 {
+        font-size: 24px;
+        margin-left: 80px;
+    }
+}
+
+@media (max-width:488px) {
+    .buttonn {
+        opacity: 0.2;
+        position: fixed;
+        bottom: 1%;
+        right: 3%;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .buttonn:hover {
+        opacity: 1;
+    }
+
+    .intro {
+        height: 500px;
+    }
+
+    .text-image-mask {
+        font-size: 1.5rem;
+    }
+
+    .about-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-section .text-section {
+        transform: none;
+        width: 100%;
+    }
+
+    .about-section .image-section {
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .image-section img {
+        border-radius: 50%;
+    }
+
+    .about-section p {
+        width: auto;
+    }
+
+    .text-section h3 {
+        margin-top: 135px;
+        font-size: 24px;
+        text-align: center;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-section {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+
+    .about-section .in img {
+        height: 250px;
+        width: 250px;
+        margin-top: -20px;
+        margin-left: 50px;
+    }
+
+    /* team experts */
+    .our-team {
+        height: auto;
+    }
+
+    .team h1 {
+        text-align: center;
+        font-size: 28px;
+        padding-bottom: 10px;
+    }
+
+    .team p {
+        padding: 0 3%;
+        font-size: 10px;
+    }
+
+    .experts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expertise img {
+        height: 160px;
+        margin-left: -30px;
+        width: 250px;
+    }
+
+    .expertises img {
+        height: 160px;
+        margin-left: 50px;
+        width: 250px;
+    }
+
+    .expertise h3 {
+        font-size: 20px;
+        padding-left: 20px;
+        text-align: center;
+    }
+
+    .expertise p {
+        font-size: 10px;
+        margin-left: -40px;
+        text-align: justify;
+        padding: 0 2%;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 280px;
+    }
+
+    .expertises p {
+        font-size: 10px;
+        margin-left: 45px;
+        padding: 0 2%;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 280px;
+
+    }
+
+    .expertises h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+}
+
+@media (max-width:391px) {
+    .buttonn {
+        opacity: 0.2;
+        position: fixed;
+        bottom: 1%;
+        right: 6%;
+        padding: 5px 12px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .buttonn:hover {
+        opacity: 1;
+    }
+}
+
+@media (max-width:380px) {
+    .buttonn {
+        opacity: 0.5;
+        position: fixed;
+        bottom: 2%;
+        right: 8%;
+        padding: 2px 8px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    .buttonn:hover {
+        opacity: 1;
+    }
+
+    .text-image-mask {
+        font-size: 1.4rem;
+    }
+
+    /* our team */
+    .our-team {
+        height: auto;
+    }
+
+    .team h1 {
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .team p {
+        padding: 0 2%;
+        font-size: 9px;
+    }
+
+    .experts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .expertise img {
+        height: 110px;
+        margin-left: -20px;
+        width: 200px;
+    }
+
+    .expertises img {
+        height: 110px;
+        margin-left: 60px;
+        width: 200px;
+    }
+
+    .expertise h3 {
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .expertise p {
+        font-size: 9px;
+        margin-left: -20px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 200px;
+    }
+
+    .expertises p {
+        font-size: 9px;
+        margin-left: 60px;
+        margin-top: -15px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 200px;
+
+    }
+
+    .expertises h3 {
+        font-size: 15px;
+        text-align: center;
+        margin-left: 50px;
+    }
+}

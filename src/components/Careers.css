@@ -1,0 +1,634 @@
+.career h3 {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(4, 4, 109);
+}
+
+.sec {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./assets/ins.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -20px;
+    overflow: hidden;
+    display: flex;
+    margin-top: 70px;
+}
+
+.PhoneInput.sha {
+    width: 343px;
+}
+
+.seconds {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    background-image: url(./assets/bg-career.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+}
+
+.text1 h3 {
+    font-family: Poppins, sans-serif;
+    font-size: 42px;
+}
+
+.text1 p {
+    font-family: Poppins, sans-serif;
+    width: 340px;
+    font-size: 20px;
+}
+
+.hr-contact {
+    display: flex;
+    font-family: Poppins, sans-serif;
+}
+
+.hr-contact a {
+    text-decoration: none;
+    color: rgb(83, 81, 81);
+    font-weight: 600;
+    padding-top: 21px;
+    padding-left: 10px;
+}
+
+.c1 {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    background: rgb(249, 245, 245);
+}
+
+.c1 h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: rgb(2, 2, 116);
+    margin-top: -10px;
+}
+
+.c1 h6 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    margin-top: -25px;
+}
+
+.cnt {
+    background: white;
+    width: 400px;
+    height: auto;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.cnt h1 {
+    color: rgb(5, 5, 93);
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.cnt form {
+    margin-left: 30px;
+
+}
+
+.cnt form input {
+    width: 330px;
+    font-family: 'Poppins', sans-serif;
+    color: rgb(57, 56, 56);
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 2px solid black;
+
+}
+
+.cnt form textarea {
+    height: 120px;
+    font-family: 'Poppins', sans-serif;
+    width: 340px;
+    border: 2px solid black;
+}
+
+.cnt form label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.cnt form .inp {
+    border: none;
+}
+
+.drag-drop {
+    width: 340px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cnt form button {
+    margin-left: 100px;
+    padding: 5px 55px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    background: red;
+}
+
+.buttonss {
+
+    position: fixed;
+    bottom: 3%;
+    right: 1%;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.2;
+    background: red;
+    z-index: 9999;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.buttonss:hover {
+    opacity: 1;
+}
+
+.img {
+    display: flex;
+    flex-direction: column;
+}
+
+.h5 .img img {
+    border: 5px solid black;
+    height: 150px;
+    width: 300px;
+}
+
+@media (max-width:1300px) {
+    .seconds {
+        height: auto;
+        justify-content: space-evenly;
+    }
+
+    .PhoneInput.sha {
+        width: 362px;
+    }
+
+    .cnt {
+        background: white;
+        width: 420px;
+        height: 550px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+        border-radius: 5px;
+    }
+
+    .cnt h1 {
+        font-size: 2.2rem;
+    }
+
+    .cnt form input {
+        width: 350px;
+        height: 22px;
+    }
+
+    .cnt form textarea {
+        width: 355px;
+    }
+
+    .cnt form button {
+        color: white;
+        background: aqua;
+        padding: 8px 50px;
+        margin-left: 100px;
+    }
+
+    .drag-drop {
+        width: 360px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+}
+
+@media (max-width:1030px) {
+    .buttonss {
+        position: fixed;
+        bottom: 3%;
+        right: 1%;
+        padding: 7px 13px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        opacity: 0.2;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .buttonss:hover {
+        opacity: 1;
+    }
+
+    .seconds {
+        height: auto;
+
+    }
+
+    .PhoneInput.sha {
+        width: 222px;
+    }
+
+    .cnt {
+        background: white;
+        width: 300px;
+        height: 400px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .cnt h1 {
+        font-size: 1.4rem;
+    }
+
+    .cnt form input {
+        width: 210px;
+        height: 12px;
+    }
+
+    .cnt form textarea {
+        width: 215px;
+        height: 60px;
+    }
+
+    .cnt form button {
+        color: white;
+        background: rgb(8, 223, 19);
+        padding: 5px 40px;
+        margin-left: 50px;
+    }
+
+    .drag-drop {
+        width: 220px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:834px) {
+    .buttonss {
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        padding: 8px 14px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        opacity: 0.2;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 16px;
+    }
+
+    .buttonss:hover {
+        opacity: 1;
+    }
+
+    .seconds {
+        height: auto;
+        justify-content: space-evenly;
+    }
+
+    .text1 h3 {
+        font-size: 1.8rem;
+    }
+
+    .text1 p {
+        font-size: 18px;
+        width: 250px;
+    }
+
+    .cnt {
+        background: white;
+        width: 350px;
+        height: 450px;
+        margin-top: 40px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .cnt h1 {
+        font-size: 1.6rem;
+    }
+
+    .cnt form input {
+        width: 280px;
+        height: 17px;
+    }
+
+    .cnt form textarea {
+        width: 285px;
+    }
+
+    .cnt form button {
+        color: white;
+        background: rgb(122, 6, 218);
+        padding: 8px 70px;
+        margin-left: 60px;
+
+    }
+
+    .PhoneInput.sha {
+        width: 292px;
+    }
+
+
+    .drag-drop {
+        width: 290px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+    }
+}
+
+
+@media (max-width:518px) {
+    .buttonss {
+        position: fixed;
+        bottom: 1%;
+        right: 3%;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        opacity: 0.2;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    /* .h5 {
+        display: none;
+    } */
+
+    .buttonss:hover {
+        opacity: 1;
+    }
+
+    .sec {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .cnt h1 {
+        font-size: 1.8rem;
+    }
+
+    .PhoneInput.sha {
+        width: 192px;
+    }
+
+    .career h3 {
+        text-align: center;
+        font-size: 1.2rem;
+        background: linear-gradient(to left, red, blue);
+    }
+
+
+    .c1 h4 {
+        font-size: 1.4rem;
+        margin-left: -45px;
+        margin-top: 10px;
+    }
+
+    .c1 h6 {
+        font-size: 0.8rem;
+        margin-left: -20px;
+    }
+
+    .h5 h5 {
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+        text-align: center;
+        height: 100%;
+
+    }
+
+    .seconds {
+        height: auto;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+    }
+
+
+
+    /* .cnt form {
+        height: 200px;
+        width: 250px;
+    } */
+
+    .cnt form input {
+        width: 180px;
+        height: 8px;
+    }
+
+    .cnt form textarea {
+        height: 25px;
+        width: 185px;
+    }
+
+
+
+    .seconds .cnt {
+        margin-left: 80px;
+        width: 250px;
+        height: 380px;
+        margin-top: 10px;
+
+    }
+
+    .cnt form button {
+        padding: 4px 35px;
+        margin-left: 35px;
+        margin-top: -20px;
+
+    }
+
+    .drag-drop {
+        width: 190px;
+        height: 25px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .text1 {
+        margin-left: 100px;
+    }
+
+    .text1 h3 {
+        font-size: 1.2rem;
+    }
+
+    .text1 p {
+        font-size: 0.8rem;
+        width: 300px;
+        text-align: center;
+        margin-left: -55px;
+    }
+
+    .hr-contact {
+        margin-top: 20px;
+        margin-left: -40px;
+    }
+
+    .hr-contact h4 {
+        font-size: 0.8rem;
+    }
+
+    .hr-contact a {
+        margin-top: -4px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width:391px) {
+    .buttonss {
+
+        position: fixed;
+        bottom: 2%;
+        right: 5%;
+        opacity: 0.2;
+        padding: 5px 12px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .buttonss:hover {
+        opacity: 1;
+    }
+}
+
+@media (max-width:380px) {
+    .buttonss {
+
+        position: fixed;
+        bottom: 2%;
+        right: 2%;
+        opacity: 0.2;
+        padding: 4px 9px;
+        border: none;
+        border-radius: 50%;
+        background: red;
+        z-index: 9999;
+        color: white;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .buttonss:hover {
+        opacity: 1;
+    }
+
+    .seconds {
+        height: auto;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: space-evenly;
+        padding-bottom: 10px;
+    }
+
+
+
+    /* .cnt form {
+        height: 200px;
+        width: 250px;
+    } */
+
+    .cnt form input {
+        width: 180px;
+        height: 8px;
+        border: 1px solid black;
+    }
+
+    .cnt form textarea {
+        height: 25px;
+        border: 1px solid black;
+        width: 185px;
+    }
+
+
+
+    .seconds .cnt {
+        margin-left: 70px;
+        width: 250px;
+        height: 370px;
+        margin-top: 10px;
+
+    }
+
+    .cnt form button {
+        padding: 4px 35px;
+        margin-left: 35px;
+        margin-top: -20px;
+
+    }
+
+    .drag-drop {
+        width: 190px;
+        height: 25px;
+        text-align: center;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .text1 {
+        margin-left: 80px;
+    }
+
+    .text1 h3 {
+        font-size: 1.2rem;
+        padding-left: 20px;
+    }
+
+    .text1 p {
+        font-size: 0.8rem;
+        padding-left: 5px;
+    }
+
+    .hr-contact {
+        margin-top: 20px;
+        margin-left: -30px;
+    }
+
+    .hr-contact h4 {
+        font-size: 0.8rem;
+    }
+
+    .hr-contact a {
+        margin-top: -4px;
+        font-size: 0.8rem;
+    }
+}

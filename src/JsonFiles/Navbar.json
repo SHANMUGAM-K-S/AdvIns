@@ -1,0 +1,24 @@
+{
+    "home": "Home",
+    "services": "Services",
+    "catalogues": "Catalogues",
+    "careers": "Careers",
+    "contact": "Contact",
+    "dropdowns": {
+        "mechanical": "Mechanical Services",
+        "automotive": "Automotive",
+        "automation": "Automation",
+        "cad": "CAD Services",
+        "manufacture": "Manufacturing",
+        "system": "System Integration",
+        "spm": "Special Purpose Machines",
+        "pnea": "Pneaumatics"
+    },
+    "softwareservices": {
+        "software": "Software Services",
+        "web": "Web Development"
+    },
+    "logo": {
+        "image": "https://static.wixstatic.com/media/fbe21a_6f3f12bd11ae4ba19718ab8eed376993~mv2.webp/v1/fill/w_248,h_94,al_c,lg_1,q_80,enc_avif,quality_auto/fbe21a_6f3f12bd11ae4ba19718ab8eed376993~mv2.webp"
+    }
+}
