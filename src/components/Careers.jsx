@@ -137,12 +137,20 @@ const Careers = ({ recipientEmail }) => {
                             <h4>{job.name}</h4>
                             <p><strong>Experience:</strong> {job.experience}</p>
                             <p><strong>Location:</strong> {job.location}</p>
-                            <img src={job.image} alt={job.name} style={{ width: "100px", borderRadius: "8px" }} />
+
+                            {/* Ensure image rendering properly */}
+                            {job.image && typeof job.image === "string" ? (
+                                <img src={job.image} alt={job.name} />
+                            ) : (
+                                <p>No image available</p>
+                            )}
+
                             {/* <Link to={`/job/${job.id}`}>View Details</Link> */}
                         </div>
                     ))}
                 </div>
             </div>
+
             <div className="seconds">
 
                 <div className="text1">

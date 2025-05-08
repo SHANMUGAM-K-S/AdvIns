@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FaUser, FaLock } from "react-icons/fa";
 
 const validUsers = [
-    { username: "admin", password: "12345" },
+    { username: "admin", password: "1212" },
     { username: "user1", password: "password1" },
     { username: "user2", password: "password2" },
 ];

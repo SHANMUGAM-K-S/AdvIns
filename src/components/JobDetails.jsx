@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import "./JobDetails.css";
 
 const JobDetails = () => {
     const [formData, setFormData] = useState({
@@ -7,36 +8,81 @@ const JobDetails = () => {
         experience: "",
         location: "",
         description: "",
-        image: ""
+        image: null
     });
 
+    const [jobs, setJobs] = useState([]);
+
+    useEffect(() => {
+        axios.get("http://localhost:5000/jobs")
+            .then(response => setJobs(response.data))
+            .catch(error => console.error("⚠️ Error fetching jobs:", error));
+    }, []);
+
     const handleChange = (e) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
+        if (e.target.name === "image" && e.target.files.length > 0) {
+            const file = e.target.files[0];
+            setFormData({ ...formData, image: file });
+        } else {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        }
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formDataToSend = new FormData();
+        Object.keys(formData).forEach((key) => {
+            formDataToSend.append(key, formData[key]);
+        });
 
-        axios.post("http://localhost:5000/jobs", formData)
+        axios.post("http://localhost:5000/jobs", formDataToSend, {
+            headers: { "Content-Type": "multipart/form-data" },
+        })
             .then(response => {
-                console.log("Job added:", response.data);
+                console.log("✅ Job added:", response.data);
+                setJobs([...jobs, response.data.job]);
                 alert("✅ Job added successfully!");
-                setFormData({ name: "", experience: "", location: "", description: "", image: "" });
+                setFormData({ name: "", experience: "", location: "", description: "", image: null });
             })
             .catch(error => console.error("⚠️ Error adding job:", error));
     };
 
+    const handleDelete = (id) => {
+        axios.delete(`http://localhost:5000/jobs/${id}`)
+            .then(() => {
+                alert("🗑️ Job removed successfully!");
+                setJobs(jobs.filter(job => job.id !== id));
+            })
+            .catch(error => console.error("⚠️ Error deleting job:", error));
+    };
+
     return (
-        <div className="job-details" style={{ marginTop: '150px' }}>
-            <h2>Add a New Job</h2>
+        <div className="job-details">
+            <h2>Manage Jobs</h2>
             <form onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Job Title" value={formData.name} onChange={handleChange} required />
                 <input type="text" name="experience" placeholder="Experience" value={formData.experience} onChange={handleChange} required />
                 <input type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange} required />
                 <input type="text" name="description" placeholder="Job Description" value={formData.description} onChange={handleChange} required />
-                <input type="text" name="image" placeholder="Image URL" value={formData.image} onChange={handleChange} required />
+                <input type="file" name="image" onChange={handleChange} required />
+
+                {/* Show image preview */}
+                {formData.image && (
+                    <img src={URL.createObjectURL(formData.image)} alt="Preview" style={{ width: "200px", height: "150px" }} />
+                )}
+
                 <button type="submit">➕ Add Job</button>
             </form>
+
+            <h3>Existing Jobs</h3>
+            <ul>
+                {jobs.map(job => (
+                    <li key={job.id}>
+                        <strong>{job.name}</strong> - {job.location}
+                        <button onClick={() => handleDelete(job.id)}>🗑️ Remove</button>
+                    </li>
+                ))}
+            </ul>
         </div>
     );
 };
