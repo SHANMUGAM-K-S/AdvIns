@@ -1,17 +1,1 @@
-[
-  {
-    "id": 1,
-    "name": "shanmugam",
-    "experience": "2+ yrs",
-    "location": "Bangalore",
-    "image": "http://localhost:5000/uploads/1746776604782-contact-front.jpg"
-  },
-  {
-    "id": "12212",
-    "name": "Shanmugam K",
-    "experience": "2+ yrs",
-    "location": "WFH",
-    "description": "Immediate hiring a web developer to enhance our team and develop multiple web pages",
-    "image": "http://localhost:5000/uploads/1746777010606-contact-front.jpg"
-  }
-]
+[]

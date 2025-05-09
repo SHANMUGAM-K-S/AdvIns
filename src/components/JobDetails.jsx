@@ -4,6 +4,7 @@ import "./JobDetails.css";
 
 const JobDetails = () => {
     const [formData, setFormData] = useState({
+        id: "", // ✅ Added Job ID field
         name: "",
         experience: "",
         location: "",
@@ -14,7 +15,7 @@ const JobDetails = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        axios.get("https://servers-j6sq.onrender.com/jobs")
+        axios.get("http://localhost:5000/jobs")
             .then(response => setJobs(response.data))
             .catch(error => console.error("⚠️ Error fetching jobs:", error));
     }, []);
@@ -35,20 +36,20 @@ const JobDetails = () => {
             formDataToSend.append(key, formData[key]);
         });
 
-        axios.post("https://servers-j6sq.onrender.com/jobs", formDataToSend, {
+        axios.post("http://localhost:5000/jobs", formDataToSend, {
             headers: { "Content-Type": "multipart/form-data" },
         })
             .then(response => {
                 console.log("✅ Job added:", response.data);
                 setJobs([...jobs, response.data.job]);
                 alert("✅ Job added successfully!");
-                setFormData({ name: "", experience: "", location: "", description: "", image: null });
+                setFormData({ id: "", name: "", experience: "", location: "", description: "", image: null });
             })
             .catch(error => console.error("⚠️ Error adding job:", error));
     };
 
     const handleDelete = (id) => {
-        axios.delete(`https://servers-j6sq.onrender.com/jobs/${id}`)
+        axios.delete(`http://localhost:5000/jobs/${id}`)
             .then(() => {
                 alert("🗑️ Job removed successfully!");
                 setJobs(jobs.filter(job => job.id !== id));
@@ -60,7 +61,7 @@ const JobDetails = () => {
         <div className="job-details">
             <h2>Manage Jobs</h2>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="id" placeholder="Job ID " value={formData.id} onChange={handleChange} required />
+                <input type="text" name="id" placeholder="Job ID (Manual Entry)" value={formData.id} onChange={handleChange} required />
                 <input type="text" name="name" placeholder="Job Title" value={formData.name} onChange={handleChange} required />
                 <input type="text" name="experience" placeholder="Experience" value={formData.experience} onChange={handleChange} required />
                 <input type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange} required />
@@ -81,14 +82,12 @@ const JobDetails = () => {
                     <li key={job.id}>
                         <strong>{job.name}</strong> - {job.location}
                         {job.id && <p><strong>Job ID:</strong> {job.id}</p>} {/* ✅ Displays manually entered Job ID */}
-                        <p>{job.description}</p>
+                        <p><strong>Description:</strong> {job.description}</p> {/* ✅ Added Job Description */}
                         <button onClick={() => handleDelete(job.id)}>🗑️ Remove</button>
                     </li>
                 ))}
             </ul>
         </div>
-
-
     );
 };
 

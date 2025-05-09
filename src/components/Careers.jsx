@@ -26,7 +26,7 @@ const Careers = ({ recipientEmail }) => {
     });
 
     useEffect(() => {
-        axios.get("https://servers-j6sq.onrender.com/jobs")
+        axios.get("http://localhost:5000/jobs")
             .then(response => setJobs(response.data))
             .catch(error => console.error("⚠️ Error fetching jobs:", error));
     }, []);
@@ -73,19 +73,23 @@ const Careers = ({ recipientEmail }) => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formDataObj = new FormData();
-        Object.keys(formData).forEach(key => {
+        Object.keys(formData).forEach((key) => {
             formDataObj.append(key, formData[key]);
         });
         formDataObj.append("recipientEmail", recipientEmail);
+
         try {
-            await axios.post("https://servers-j6sq.onrender.com/send-email", formDataObj, {
+            await axios.post("http://localhost:5000/send-email", formDataObj, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
-            alert("Form submitted successfully!");
+
+            alert("✅ Form submitted successfully!");
             setFormData({
+                jobId: "",
                 name: "",
                 email: "",
                 phone: "",
@@ -97,8 +101,10 @@ const Careers = ({ recipientEmail }) => {
             if (fileInputRef.current) {
                 fileInputRef.current.value = "";
             }
+
         } catch (error) {
-            console.error("Error sending email:", error);
+            console.error("⚠️ Error sending email:", error);
+            alert("⚠️ Failed to send email. Please try again.");
         }
     };
 
@@ -114,17 +120,22 @@ const Careers = ({ recipientEmail }) => {
                 <div className="c1">
                     {jobs.map((job) => (
                         <div key={job.id} className="job-card">
-                            <h4>{job.name}</h4> {/* Job name remains unchanged */}
+                            <h4>{job.name}</h4> {/* ✅ Job name remains unchanged */}
 
-                            {/* Display Job ID only if it's manually entered */}
+                            {/* ✅ Display Job ID only if it's manually entered */}
                             {job.id && <p><strong>Job ID:</strong> {job.id}</p>}
 
                             <p><strong>Experience:</strong> {job.experience}</p>
                             <p><strong>Location:</strong> {job.location}</p>
-                            <p ><strong>Description:</strong> {job.description ? job.description : "No description provided"}</p>
-                            {/* Ensure image rendering properly */}
+
+                            {/* ✅ Ensure Description is always displayed */}
+                            <p style={{ maxWidth: '300px', overflowWrap: 'break-word' }}>
+                                <strong>Description:</strong> {job.description ? job.description : "No description provided"}
+                            </p>
+
+                            {/* ✅ Ensure image rendering properly */}
                             {job.image && typeof job.image === "string" ? (
-                                <img src={job.image} alt={job.name} />
+                                <img src={job.image} alt={job.name} style={{ width: "200px", height: "150px", objectFit: "cover" }} />
                             ) : (
                                 <p>No image available</p>
                             )}

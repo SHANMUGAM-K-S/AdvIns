@@ -26,19 +26,26 @@ const Contact = ({ recipientEmail }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formDataObj = new FormData();
-        Object.keys(formData).forEach(key => {
+        Object.keys(formData).forEach((key) => {
             formDataObj.append(key, formData[key]);
         });
+
+        if (!recipientEmail) {
+            alert("⚠️ No recipient email provided.");
+            return;
+        }
+
         formDataObj.append("recipientEmail", recipientEmail);
+
         try {
-            await axios.post("https://servers-j6sq.onrender.com/send-email", formDataObj, {
+            await axios.post("http://localhost:5000/send-email", formDataObj, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
-            alert("Form submitted successfully!");
+
+            alert("✅ Form submitted successfully!");
             setFormData({
                 name: "",
                 email: "",
@@ -47,9 +54,11 @@ const Contact = ({ recipientEmail }) => {
                 file: null
             });
 
-            setPhoneNumber("");
+            setPhoneNumber(""); // ✅ Properly reset phone number
+
         } catch (error) {
-            console.error("Error sending email:", error);
+            console.error("⚠️ Error sending email:", error);
+            alert("⚠️ Failed to send email. Please try again.");
         }
     };
     return (
