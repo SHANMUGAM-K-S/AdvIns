@@ -164,6 +164,10 @@ footer .f4.in-view,
         margin-left: 55px;
     }
 
+    .f5 h2 {
+        font-size: 10px;
+    }
+
     .f2 p {
         margin-left: 25px;
     }
@@ -174,8 +178,6 @@ footer .f4.in-view,
     .footer {
         height: auto;
     }
-
-
 
     .f2 {
         margin-top: 25px;
@@ -207,7 +209,7 @@ footer .f4.in-view,
 
 
     .f5 h2 {
-        font-size: 15px;
+        font-size: 10px;
     }
 
     .f4 {
@@ -259,6 +261,7 @@ footer .f4.in-view,
     .f5 h2 {
         text-align: center;
         margin-left: 30px;
+        font-size: 8px;
     }
 
 }
@@ -286,24 +289,24 @@ footer .f4.in-view,
     }
 
     .f3 ul {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: center;
         padding-bottom: 20px;
     }
 
-    .f3 ul li {
-        padding: 5px 0;
-    }
+
 
     .f5 h2 {
-        font-size: 14px;
+        font-size: 7px;
         padding-bottom: 15px;
     }
 
     .f6 {
         display: flex;
         margin-top: -20px;
-        margin-left: 185px;
+        margin-left: 165px;
     }
 
     .f6 i {
@@ -312,6 +315,15 @@ footer .f4.in-view,
 }
 
 @media(max-width:400px) {
+
+    .f3 ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
     .f6 {
         margin-left: 155px;
     }

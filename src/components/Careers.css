@@ -91,6 +91,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
     text-align: center;
+    width: 250px;
     margin-top: -10px;
 }
 
@@ -301,6 +302,7 @@
         font-family: 'Poppins', sans-serif;
         font-size: 1.2rem;
         text-align: center;
+        width: auto;
         margin-top: -10px;
     }
 

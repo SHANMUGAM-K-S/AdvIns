@@ -121,7 +121,7 @@ const Careers = ({ recipientEmail }) => {
 
                             <p><strong>Experience:</strong> {job.experience}</p>
                             <p><strong>Location:</strong> {job.location}</p>
-                            <p style={{ width: '250px', overflow: 'auto' }}><strong>Description:</strong> {job.description ? job.description : "No description provided"}</p>
+                            <p ><strong>Description:</strong> {job.description ? job.description : "No description provided"}</p>
                             {/* Ensure image rendering properly */}
                             {job.image && typeof job.image === "string" ? (
                                 <img src={job.image} alt={job.name} />
