@@ -14,7 +14,7 @@ const JobDetails = () => {
     const [jobs, setJobs] = useState([]);
 
     useEffect(() => {
-        axios.get("http://localhost:5000/jobs")
+        axios.get("https://servers-j6sq.onrender.com/jobs")
             .then(response => setJobs(response.data))
             .catch(error => console.error("⚠️ Error fetching jobs:", error));
     }, []);
@@ -35,7 +35,7 @@ const JobDetails = () => {
             formDataToSend.append(key, formData[key]);
         });
 
-        axios.post("http://localhost:5000/jobs", formDataToSend, {
+        axios.post("https://servers-j6sq.onrender.com/jobs", formDataToSend, {
             headers: { "Content-Type": "multipart/form-data" },
         })
             .then(response => {
@@ -48,7 +48,7 @@ const JobDetails = () => {
     };
 
     const handleDelete = (id) => {
-        axios.delete(`http://localhost:5000/jobs/${id}`)
+        axios.delete(`https://servers-j6sq.onrender.com/jobs/${id}`)
             .then(() => {
                 alert("🗑️ Job removed successfully!");
                 setJobs(jobs.filter(job => job.id !== id));

@@ -35,7 +35,7 @@ const Contact = ({ recipientEmail }) => {
         });
         formDataObj.append("recipientEmail", recipientEmail);
         try {
-            await axios.post("http://localhost:5000/jobs/send-email", formDataObj, {
+            await axios.post("https://servers-j6sq.onrender.com/send-email", formDataObj, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             alert("Form submitted successfully!");

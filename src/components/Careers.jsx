@@ -26,7 +26,7 @@ const Careers = ({ recipientEmail }) => {
     });
 
     useEffect(() => {
-        axios.get("http://localhost:5000/jobs")
+        axios.get("https://servers-j6sq.onrender.com/jobs")
             .then(response => setJobs(response.data))
             .catch(error => console.error("⚠️ Error fetching jobs:", error));
     }, []);
@@ -81,7 +81,7 @@ const Careers = ({ recipientEmail }) => {
         });
         formDataObj.append("recipientEmail", recipientEmail);
         try {
-            await axios.post("http://localhost:5000/jobs/send-email", formDataObj, {
+            await axios.post("https://servers-j6sq.onrender.com/send-email", formDataObj, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             alert("Form submitted successfully!");
