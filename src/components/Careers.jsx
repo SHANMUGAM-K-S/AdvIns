@@ -17,6 +17,7 @@ const Careers = ({ recipientEmail }) => {
     const [countryCode, setCountryCode] = useState("");
     const [phoneNumber, setPhoneNumber] = useState("");
     const [formData, setFormData] = useState({
+        jobId: "",
         name: "",
         email: "",
         phone: "",
@@ -31,12 +32,12 @@ const Careers = ({ recipientEmail }) => {
     }, []);
 
 
+
     const handlePhoneChange = (e) => {
         const updatedPhone = e.target.value;
         setPhoneNumber(updatedPhone);
         setFormData({ ...formData, phone: `${countryCode}- ${updatedPhone}` });
     };
-
     const handleFileChange = (e) => {
         // setFile(e.target.files[0]);
         setFormData({ ...formData, file: e.target.files[0] });
@@ -72,25 +73,6 @@ const Careers = ({ recipientEmail }) => {
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
-
-
-    // const jobDetails = [
-    //     {
-    //         id: 1,
-    //         name: "Software Engineer",
-    //         experience: "2-4 years",
-    //         location: "Bangalore",
-    //         image: "https://example.com/software-engineer.jpg"
-    //     },
-    //     {
-    //         id: 2,
-    //         name: "Mechanical Designer",
-    //         experience: "3-5 years",
-    //         location: "Pune",
-    //         image: "https://example.com/mechanical-designer.jpg"
-    //     }
-    // ];
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         const formDataObj = new FormData();
@@ -99,7 +81,7 @@ const Careers = ({ recipientEmail }) => {
         });
         formDataObj.append("recipientEmail", recipientEmail);
         try {
-            await axios.post("https://server-282f.onrender.com/send-email", formDataObj, {
+            await axios.post("http://localhost:5000/jobs/send-email", formDataObj, {
                 headers: { "Content-Type": "multipart/form-data" }
             });
             alert("Form submitted successfully!");
@@ -132,22 +114,26 @@ const Careers = ({ recipientEmail }) => {
                 <div className="c1">
                     {jobs.map((job) => (
                         <div key={job.id} className="job-card">
-                            <h4>{job.name}</h4>
+                            <h4>{job.name}</h4> {/* Job name remains unchanged */}
+
+                            {/* Display Job ID only if it's manually entered */}
+                            {job.id && <p><strong>Job ID:</strong> {job.id}</p>}
+
                             <p><strong>Experience:</strong> {job.experience}</p>
                             <p><strong>Location:</strong> {job.location}</p>
-
+                            <p style={{ width: '250px', overflow: 'auto' }}><strong>Description:</strong> {job.description ? job.description : "No description provided"}</p>
                             {/* Ensure image rendering properly */}
                             {job.image && typeof job.image === "string" ? (
                                 <img src={job.image} alt={job.name} />
                             ) : (
                                 <p>No image available</p>
                             )}
-
-                            {/* <Link to={`/job/${job.id}`}>View Details</Link> */}
                         </div>
                     ))}
                 </div>
             </div>
+
+
 
             <div className="seconds">
                 <div className="text1">

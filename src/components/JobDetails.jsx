@@ -60,6 +60,7 @@ const JobDetails = () => {
         <div className="job-details">
             <h2>Manage Jobs</h2>
             <form onSubmit={handleSubmit}>
+                <input type="text" name="id" placeholder="Job ID " value={formData.id} onChange={handleChange} required />
                 <input type="text" name="name" placeholder="Job Title" value={formData.name} onChange={handleChange} required />
                 <input type="text" name="experience" placeholder="Experience" value={formData.experience} onChange={handleChange} required />
                 <input type="text" name="location" placeholder="Location" value={formData.location} onChange={handleChange} required />
@@ -79,11 +80,15 @@ const JobDetails = () => {
                 {jobs.map(job => (
                     <li key={job.id}>
                         <strong>{job.name}</strong> - {job.location}
+                        {job.id && <p><strong>Job ID:</strong> {job.id}</p>} {/* ✅ Displays manually entered Job ID */}
+                        <p>{job.description}</p>
                         <button onClick={() => handleDelete(job.id)}>🗑️ Remove</button>
                     </li>
                 ))}
             </ul>
         </div>
+
+
     );
 };
 
