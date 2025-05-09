@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./Home.css";
+import "./Home.css"; import frontImage from './assets/HomePageImages/HomePage-front.avif';
+import aboutImage from './assets/HomePageImages/About-Image.avif'
 import about from "../JsonFiles/AboutSection.json"
 
 
@@ -53,7 +54,7 @@ const Section2 = () => {
             <div className={visible ? "page-enter-active" : "page-enter"}>
                 {/* background image section */}
                 <div className="intro">
-                    <img src={about.images.frontImage} alt="" />
+                    <img src={frontImage} alt="" />
                 </div>
                 <div className="texts">
                     {/* Heading  */}
@@ -71,7 +72,7 @@ const Section2 = () => {
                     <div className="image-section">
                         <div className="in">
                             {/* About rightside image section */}
-                            <img src={about.images.aboutImage} alt="image" />
+                            <img src={aboutImage} alt="image" />
                         </div>
                     </div>
                 </div>
@@ -79,21 +80,22 @@ const Section2 = () => {
                     <div className="about-team">
                         <div className="team">
                             {/* Our Team Section */}
-                            <h1>{about.team}</h1>
-                            <p>{about.teamPara}</p>
+                            {/* <h1>{about.team}</h1>
+                            <p>{about.teamPara}</p> */}
                         </div>
                         {/* Left side container section */}
                         <div className="experts">
                             <div className="expertise">
-                                <img src={about.images.expertsImage} alt="" />
                                 <h3>{about.experts} </h3>
+                                <img src={about.images.expertsImage} alt="" />
+
                                 <p className="para1">{about.expertsPara}</p>
                             </div>
                             <hr />
                             {/* Right side container section */}
                             <div className="expertises">
-                                <img src={about.images.visionImage} alt="" />
                                 <h3>{about.visionmission}</h3>
+                                <img src={about.images.visionImage} alt="" />
                                 <p className="para2"> <strong>Vision</strong> – {about.visionPara}
                                     <br /><br />
                                     <strong>   Mission</strong> – {about.missionPara} </p>

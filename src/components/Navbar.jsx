@@ -1,5 +1,6 @@
-
-import React, { useState, useEffect, useRef } from "react"; import { MdKeyboardArrowDown } from "react-icons/md";
+import logo from './assets/Logo/Logo.avif'
+import React, { useState, useEffect, useRef } from "react";
+import { IoPersonCircleOutline } from "react-icons/io5";
 import "./Nav.css"; import { useLocation } from "react-router-dom";
 import nav from "../JsonFiles/Navbar.json"
 
@@ -53,7 +54,7 @@ const Navbar = () => {
         <div className="nav" >
             <nav ref={navRef}>
                 <img
-                    src={nav.logo.image}
+                    src={logo}
                     alt="Logo" onClick={() => handleNavigation("/")}
                 />
 
@@ -87,11 +88,37 @@ const Navbar = () => {
 
                             </ul>
                         </li>
-                        <li><a href="#" onClick={handleDownload} target="_blank" >{nav.catalogues}</a></li>
+                        <li className="dropdown">
+                            <a href="#" onClick={() => handleNavigation('/service')} >{nav.catalogues}</a>
+                            <ul className="dropdown-menu ">
+                                <li className="dropdowns"><a target="_blank" style={styles} onClick={handleDownload} >{nav.dropdowns.mechanical}</a>
+                                    <hr />
+                                    <ul className="dropdown-menus">
+                                        <li><a href="#" style={{ fontSize: '12px', whiteSpace: 'nowrap', margin: '-30px', }}>{nav.dropdowns.automotive}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.automation}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.cad}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.manufacture}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.system}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.spm}</a></li>
+                                        <li><a href="#" style={style}>{nav.dropdowns.pnea}</a></li>
+                                    </ul>
+                                </li>
+                                <li className="software"><a style={styles} onClick={() => handleNavigation("/SoftwareServices")}>{nav.softwareservices.software}</a>
+                                    <hr />
+
+                                    <ul className="softwares">
+                                        <li><a href="#" style={style}>{nav.softwareservices.web}</a></li>
+                                        <li><a href="#" style={style}>{nav.softwareservices.software}</a></li>
+
+                                    </ul>
+                                </li>
+
+                            </ul>
+                        </li>
                         <li><a onClick={() => handleNavigation("/career")}>{nav.careers}</a></li>
 
                         <li><a onClick={() => handleNavigation("/contact")}>{nav.contact}</a></li>
-                        <li><a onClick={() => handleNavigation("/admin")}><MdKeyboardArrowDown />
+                        <li><a onClick={() => handleNavigation("/admin")}><IoPersonCircleOutline style={{ fontSize: '25px', paddingTop: '5px' }} />
                         </a></li>
                     </ul>
                 </div>

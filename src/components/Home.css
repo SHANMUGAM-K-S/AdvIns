@@ -134,7 +134,7 @@
 .our-team {
     border: 3px solid rgb(17, 6, 135);
     margin: 20px;
-    height: 95vh;
+    height: auto;
 }
 
 .about-team {
@@ -146,7 +146,6 @@
     text-align: center;
     font-size: 45px;
     font-family: 'Poppins', sans-serif;
-    margin-bottom: 5px;
 }
 
 .team p {
@@ -163,7 +162,6 @@
 
 /* left side image */
 .expertise {
-    margin-top: 25px;
     text-align: center;
     margin-left: 200px;
 }
@@ -172,7 +170,7 @@
     border: 5px solid darkblue;
     height: 220px;
     width: 370px;
-    margin-bottom: -15px;
+    margin-bottom: 5px;
 }
 
 .expertise h3 {
@@ -189,7 +187,6 @@
 /* right side image */
 
 .expertises {
-    margin-top: 25px;
     text-align: center;
     margin-right: 200px;
 }
@@ -209,7 +206,7 @@
     border: 5px solid darkblue;
     height: 220px;
     width: 370px;
-    margin-bottom: -15px;
+    margin-bottom: 5px;
 }
 
 /* arrow */
@@ -288,17 +285,6 @@
         height: auto;
     }
 
-    .team h1 {
-        font-size: 4rem;
-        margin-top: 5px;
-        color: rgb(1, 1, 63);
-    }
-
-    .team p {
-        font-size: 16px;
-        margin-top: -15px;
-    }
-
     .expertise {
         margin-left: 80px;
     }
@@ -328,8 +314,14 @@
         opacity: 1;
     }
 
-    .intro {
+
+
+    .intro img {
         height: 550px;
+    }
+
+    .texts h1 {
+        margin-top: -80px;
     }
 
     .text-image-mask {
@@ -365,17 +357,6 @@
     /* our team */
     .our-team {
         height: auto;
-    }
-
-    .team h1 {
-        text-align: center;
-        font-size: 30px;
-        margin-bottom: -15px;
-    }
-
-    .team p {
-        padding: 5px 3%;
-        font-size: 17px;
     }
 
     .experts {
@@ -438,8 +419,10 @@
         opacity: 1;
     }
 
-    .intro {
-        height: 600px;
+
+    .intro img {
+        height: 500px;
+        margin-top: 80px;
     }
 
     .text-image-mask {
@@ -475,16 +458,6 @@
         height: auto;
     }
 
-    .team h1 {
-        text-align: center;
-        font-size: 38px;
-    }
-
-    .team p {
-        padding: 0 3%;
-        font-size: 17px;
-    }
-
     .experts {
         display: flex;
         flex-direction: column;
@@ -494,13 +467,11 @@
         height: 230px;
         margin-right: 70px;
         width: 420px;
-        margin-top: -20px;
     }
 
     .expertises img {
         height: 230px;
         margin-left: 70px;
-        margin-top: -30px;
         width: 420px;
     }
 
@@ -512,7 +483,6 @@
     .expertise p {
         font-size: 17px;
         margin-right: 50px;
-        margin-top: -15px;
         padding: 0 5%;
         font-family: Arial, Helvetica, sans-serif;
         width: auto;
@@ -522,7 +492,6 @@
         font-size: 17px;
         margin-left: 50px;
         padding: 0 5%;
-        margin-top: -15px;
         font-family: Arial, Helvetica, sans-serif;
         width: auto;
 
@@ -554,12 +523,20 @@
         opacity: 1;
     }
 
-    .intro {
-        height: 500px;
+    .intro img {
+        border: 5px solid white;
+        height: 350px;
+        margin-top: 65px;
+    }
+
+    .texts h1 {
+        margin-top: -350px;
+
     }
 
     .text-image-mask {
         font-size: 1.5rem;
+
     }
 
     .about-section {
@@ -586,7 +563,6 @@
     }
 
     .text-section h3 {
-        margin-top: 135px;
         font-size: 24px;
         text-align: center;
         display: flex;
@@ -686,12 +662,25 @@
         font-size: 20px;
     }
 
+
     .buttonn:hover {
         opacity: 1;
     }
 }
 
 @media (max-width:380px) {
+
+    .intro img {
+        margin-top: 65px;
+        height: 250px;
+        background-position: center;
+        background-size: cover;
+    }
+
+    .texts h1 {
+        margin-top: -380px;
+    }
+
     .buttonn {
         opacity: 0.5;
         position: fixed;
@@ -762,7 +751,6 @@
     .expertises p {
         font-size: 9px;
         margin-left: 60px;
-        margin-top: -15px;
         font-family: Arial, Helvetica, sans-serif;
         width: 200px;
 

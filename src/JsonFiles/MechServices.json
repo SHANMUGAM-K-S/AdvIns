@@ -1,0 +1,43 @@
+{
+    "header": "Mechanical Industry",
+    "automotive": {
+        "sub-head": "Automotive",
+        "sub-service": "BIW Line Engineering",
+        "sub-service2": "Process Planning",
+        "sub-service3": "Design & Detailing",
+        "sub-service4": "Robotic Simulation",
+        "sub-service5": "Documents",
+        "button": "View More",
+        "image": "Automotive2.png"
+    },
+    "automation": {
+        "sub-head": "Automation",
+        "sub-service": "SPM (Special Purpose Machines)",
+        "sub-service2": "Assembly Automation",
+        "sub-service3": "Robotics"
+    },
+    "cad": {
+        "sub-head": "CAD Services",
+        "sub-service": "2D-3D Conversions",
+        "sub-service2": "Drafting Services",
+        "sub-service3": "CAD Customization"
+    },
+    "manufacturing": {
+        "sub-head": "Manufacturing",
+        "sub-service": "Contract Manufacturing",
+        "sub-service2": "Spare Parts Manufacturing",
+        "sub-service3": "Fixtures,Grippers etc..."
+    },
+    "system": {
+        "sub-head": "System Integration",
+        "sub-service": "Unique Offering & Application Specific Solutions "
+    },
+    "SPM": {
+        "sub-head": "Special Purpose Machines",
+        "sub-service": "Unique Offering & Application Specific Solutions "
+    },
+    "Pnea": {
+        "sub-head": "Pneaumatics",
+        "sub-service": "Unique Offering & Application Specific Solutions "
+    }
+}

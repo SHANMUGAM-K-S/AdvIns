@@ -33,7 +33,6 @@ import ServiceHomePage from './components/ServicesHomePage'
 import MechanicalServices from './components/MechanicalServices'
 import SoftwareServices from './components/SoftwareServices'
 import AutomotiveServices from './components/AutomotiveServices'
-import About from './components/About'
 import ScrollToTop from './components/ScrollToTop'
 
 import 'react-phone-number-input/style.css';
@@ -54,7 +53,6 @@ const App = () => {
           <Route path='/' element={<Home />} />
           <Route path='/career' element={<Careers recipientEmail="magizhchisk@gmail.com" />} />
           <Route path='/contact' element={<Contact recipientEmail="ksshanmugam420@gmail.com" />} />
-          <Route path='/about' element={<About />} />
           <Route path='/service' element={<ServiceHomePage />} />
           <Route path='/MechanicalServices' element={<MechanicalServices />} />
           <Route path='/SoftwareServices' element={<SoftwareServices />} />

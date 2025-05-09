@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import './Footer.css'
 import { useNavigate } from "react-router-dom";
 import footer from '../JsonFiles/Footer.json'
+import contacts from '../JsonFiles/Contact.json'
 import nav from "../JsonFiles/Navbar.json"
 
 const Footer = () => {
@@ -47,7 +48,7 @@ const Footer = () => {
 
                 <div className="f2">
                     <h2>{footer.address} :</h2>
-                    <p>{footer.addressLine1},<br />{footer.addressLine2}<br /> {footer.addressLine3} </p>
+                    <p>{contacts.companyAddress.addressLine1},<br />{contacts.companyAddress.addressLine2}<br /> {contacts.companyAddress.addressLine3} <br /> {contacts.companyAddress.addressLine4} </p>
                 </div>
 
                 <div className="f3">

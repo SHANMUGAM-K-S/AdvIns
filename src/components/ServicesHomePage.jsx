@@ -23,6 +23,7 @@ function ServiceHomePage() {
     function auto() {
         navigate('/AutomotiveServices')
     }
+
     return (
         <>
             <div className="container2">
@@ -41,26 +42,23 @@ function ServiceHomePage() {
                 {showDropdown && (<div className="dropdown-content" onClick={(e) => e.stopPropagation()}>
 
                     <ul className="ul">
-                        <li><a href="#" onClick={handleClick1}>Mechanical</a></li>
+                        <li><a href="#" className="headings" onClick={handleClick1} >Mechanical</a></li>
 
-                        <li><a href="#" onClick={auto}>Automotive</a></li>
-                        <li><a href="#"  >Automation</a></li>
-                        <li><a href="#">CAD Services</a></li>
-                        <li><a href="#">Manufacturing</a></li>
-                        <li><a href="#">System Integration</a></li>
-                        <li><a href="#" >Special Purpose Machines</a></li>
-                        <li><a href="#" >Pneaumatics</a></li>
+                        <li><a href="#" className="sub-headings" onClick={auto} >Automotive</a></li>
+                        <li><a href="#" className="sub-headings"  >Automation</a></li>
+                        <li><a href="#" className="sub-headings">CAD Services</a></li>
+                        <li><a href="#" className="sub-headings" >Manufacturing</a></li>
+                        <li><a href="#" className="sub-headings" >System Integration</a></li>
+                        <li><a href="#" className="sub-headings" >Special Purpose Machines</a></li>
+                        <li><a href="#" className="sub-headings" >Pneaumatics</a></li>
 
 
-                        <li><a href="#" onClick={handleClick2}>Software</a></li>
+                        <li><a href="#" onClick={handleClick2} className="headings"  >Software</a></li>
 
-                        <li><a href="#" >Web Development</a></li>
-                        <li><a href="#">Software Services</a></li>
+                        <li><a href="#" className="sub-headings">Web Development</a></li>
+                        <li><a href="#" className="sub-headings" >Software Services</a></li>
 
                     </ul>
-                    {/* <a href="#" onClick={handleClick1}>Mechanical</a>
-<a href="#" onClick={handleClick2}>Software</a> */}
-
                 </div>)}
             </div>
         </>

@@ -180,6 +180,7 @@ img {
 
 
 /*  */
+
 @media (max-width:834px) {
     nav {
         position: fixed;
@@ -193,11 +194,11 @@ img {
     }
 
     #navbar {
-        margin-left: 35px;
+        margin-left: 10px;
     }
 
     #navbar li a {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
 }

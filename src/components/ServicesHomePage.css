@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     min-height: 100vh;
     padding: 40px;
-    background-image: url(./assets/Mechpage.jpg);
+    background-image: url(./assets/ServicesFrontPageImages//Services.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,18 +45,18 @@
     display: none;
 }
 
-
+.drop {
+    display: none;
+}
 
 @media (max-width:510px) {
-
-
     #buttons {
         display: block;
-        bottom: 3%;
+        bottom: 4%;
         background: red;
         color: white;
         padding: 10px 12px;
-        right: 5%;
+        right: 2%;
         border: none;
         border-radius: 50%;
         opacity: 0.7;
@@ -71,7 +71,7 @@
         bottom: 37%;
         width: auto;
         right: 50%;
-        display: inline;
+        display: block;
     }
 
     .dropbtn {
@@ -92,10 +92,19 @@
         z-index: 1;
     }
 
-    /* .dropdown-content .ul {
-        display: flex;
-        flex-direction: row;
-    } */
+    .headings {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+        color: black;
+    }
+
+    .sub-headings {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: black;
+        padding-left: 5px;
+    }
+
+
 
     .dropdown-content ul li {
         list-style: none;
@@ -105,7 +114,7 @@
     .dropdown-content ul li a {
         display: block;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 12px;
         width: 150px;
 
     }
@@ -135,14 +144,25 @@
         opacity: 0.7;
     }
 
+    .headings {
+        font-weight: bold;
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .sub-headings {
+        color: black;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 5px;
+    }
 
 
     .drop {
         position: fixed;
-        bottom: 50%;
+        bottom: 43%;
         width: auto;
         right: 62%;
-        display: inline;
+        display: block;
     }
 
     .dropbtn {
@@ -170,14 +190,14 @@
 
     .dropdown-content ul li {
         list-style: none;
-        padding-top: 5px;
     }
 
     .dropdown-content ul li a {
         display: block;
         text-decoration: none;
-        font-size: 14px;
+        font-size: 10px;
         width: 150px;
+        color: black;
 
     }
 

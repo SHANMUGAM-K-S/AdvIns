@@ -3,6 +3,9 @@ import './Contact.css'
 import { ValidationError } from '@formspree/react';
 import axios from "axios";
 import 'react-phone-number-input/style.css';
+import frontImg from './assets/ContactPageImages/Contact-us-Front.jpg'
+import contact from '../JsonFiles/Contact.json'
+
 
 const Contact = ({ recipientEmail }) => {
     const [phoneNumber, setPhoneNumber] = useState("");
@@ -54,18 +57,18 @@ const Contact = ({ recipientEmail }) => {
             <div className='contac'>
                 <div className="contact-page">
                     <div className="contact-us">
-                        {/* <h1>Contact Us</h1> */}
+                        <img src={frontImg} alt="" />
                     </div>
 
                 </div>
 
                 <div className="contacts">
                     <div className="office">
-                        <h2>Inspirit Engineering Solutions</h2>
-                        <p>No. 24, 1st Floor,Railway Layout, 2nd Stage, Ullal Road,Bhavani Nagar, Bangalore 560110,Karnataka,INDIA.</p>
+                        <h2>{contact.companyName}</h2>
+                        <p>{contact.companyAddress.addressLine1} <br /> {contact.companyAddress.addressLine2} <br /> {contact.companyAddress.addressLine3} <br /> {contact.companyAddress.addressLine4} </p>
                         <div className="business">
-                            <h4>BUSINESS CONTACT :</h4>
-                            <a target='_blank' href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJNstsqTrFmfQvcTbNLDldgBfSBQmBmfwNJfnTjpWBbthPnXnJKTTFxDmGlmLFrghlHzGjV">business@inspiritengineering.com</a>
+                            <h4>{contact.businessContact}</h4>
+                            <a target='_blank' href={contact.emailContact}>{contact.businessEmail}</a>
                         </div>
 
                     </div>
@@ -87,7 +90,7 @@ const Contact = ({ recipientEmail }) => {
 
                             />
                             <br />
-                            <select onChange={(e) => {
+                            <select className='select' onChange={(e) => {
                                 const newCountryCode = e.target.value;
                                 setCountryCode(newCountryCode);
                                 setFormData({ ...formData, phone: `${newCountryCode}-${phoneNumber}` });

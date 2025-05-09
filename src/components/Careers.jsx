@@ -3,7 +3,9 @@ import './Careers.css';
 import { ValidationError } from '@formspree/react';
 import axios from "axios";
 import { Link } from "react-router-dom";
-
+import bgImage from './assets/CareerPageImages/Careers_front.gif'
+import career from '../JsonFiles/Careers.json'
+import contact from '../JsonFiles/Contact.json'
 
 
 
@@ -122,15 +124,11 @@ const Careers = ({ recipientEmail }) => {
         <div>
 
             <div className="sec">
-
-                <div className="text1">
-
-
-                </div>
+                <img src={bgImage} alt="bgImage" />
 
             </div>
             <div className="career">
-                <h3>Job Opportunities</h3>
+                <h3>{career.jobOpp}</h3>
                 <div className="c1">
                     {jobs.map((job) => (
                         <div key={job.id} className="job-card">
@@ -152,17 +150,14 @@ const Careers = ({ recipientEmail }) => {
             </div>
 
             <div className="seconds">
-
                 <div className="text1">
-                    <h3>Send Us a Message</h3>
-                    <p>No. 24, 1st Floor,Railway Layout,
-                        2nd Stage, Ullal Road,Bhavani Nagar,
-                        Bangalore 560110,Karnataka,INDIA.</p>
-                    <div className="hr-contact"> <h4>HR Contact :</h4>
-                        <a target="_blank" href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJqXxmPRrBFxRnWdscvLWqRjwfcSNlTCjbfDnHXSfSRZHDRXKDppfQlpNsTbJQtzvNXkfsV">hr@inspiritengineering.com</a></div>
+                    <h3>{career.contact.title}</h3>
+                    <p>{contact.companyAddress.addressLine1}  <br />  {contact.companyAddress.addressLine2} <br /> {contact.companyAddress.addressLine3} <br /> {contact.companyAddress.addressLine4} </p>
+                    <div className="hr-contact"> <h4>{career.hrContact}</h4>
+                        <a target="_blank" href={career.linkMail}>{career.hrMail}</a></div>
                 </div>
                 <div className="cnt">
-                    <h1>CONTACT US </h1>
+                    <h1>{career.contactForm["contact-us"]} </h1>
 
                     <form onSubmit={handleSubmit} >
                         <input type="text" id="text" name="name" value={formData.name} onChange={handleChange} placeholder='Firstname' required />
@@ -182,7 +177,7 @@ const Careers = ({ recipientEmail }) => {
                         <br />
 
 
-                        <select onChange={(e) => {
+                        <select className="select" onChange={(e) => {
                             const newCountryCode = e.target.value;
                             setCountryCode(newCountryCode);
                             setFormData({ ...formData, phone: `${newCountryCode}-${phoneNumber}` });
@@ -304,10 +299,6 @@ const Careers = ({ recipientEmail }) => {
                             <option value="+44">+44 (UK)</option>
                             <option value="+971">+971 (UAE)</option>
                             <option value="+1">+1 (USA)</option>
-
-
-
-
                         </select>
                         <input
                             type="tel"
@@ -316,15 +307,12 @@ const Careers = ({ recipientEmail }) => {
                             name="phone" id="number"
                             placeholder="Enter phone number"
                         />
-
-
                         <br />
                         <textarea id="message"
                             name="message" placeholder='message' value={formData.message} onChange={handleChange} ></textarea>
                         <ValidationError
                             prefix="Message"
                             field="message"
-
                         />
                         <br />
                         <label >Resume Upload</label><br />

@@ -44,18 +44,17 @@ footer .f4.in-view,
 
 .f2 h2 {
     margin-top: 5px;
-    margin-left: 25px;
+    margin-left: -65px;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
 
 .f2 p {
     color: white;
-    margin-top: -10px;
-    margin-left: 30px;
+    margin-top: -20px;
+    margin-left: 100px;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    text-align: center;
 }
 
 
@@ -116,7 +115,7 @@ footer .f4.in-view,
     color: rgb(6, 3, 99);
     font-size: 20px;
     padding: 4px;
-    margin: 5px;
+    margin-left: 30px;
     background: white;
     border-radius: 50%;
 }
@@ -145,7 +144,7 @@ footer .f4.in-view,
     margin-top: 10px;
     margin-bottom: 0;
     padding-bottom: 10px;
-    font-size: 18px;
+    font-size: 10px;
     color: white;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -163,6 +162,10 @@ footer .f4.in-view,
         margin-top: 15px;
         font-size: 20px;
         margin-left: 55px;
+    }
+
+    .f2 p {
+        margin-left: 25px;
     }
 
 }
@@ -193,7 +196,7 @@ footer .f4.in-view,
     .f6 {
         margin-top: 40px;
         margin-bottom: 10px;
-        margin-left: 20px;
+        margin-left: 30px;
 
     }
 
@@ -230,7 +233,8 @@ footer .f4.in-view,
 
     .f2 p {
         font-size: 13px;
-        width: 200px;
+        width: auto;
+        margin-left: 10px;
     }
 
     .f3 ul {
@@ -240,9 +244,8 @@ footer .f4.in-view,
     }
 
     .f3 ul li {
-        margin-top: -40px;
-        margin-left: 25px;
-        margin-right: 10px;
+        margin-left: 20px;
+        margin-right: 5px;
     }
 
     .f3 ul li a {
@@ -251,12 +254,11 @@ footer .f4.in-view,
 
     .f6 h2 {
         font-size: 14px;
-        margin-right: 10px;
     }
 
     .f5 h2 {
         text-align: center;
-        margin-left: 20px;
+        margin-left: 30px;
     }
 
 }
@@ -267,23 +269,20 @@ footer .f4.in-view,
         flex-direction: column;
     }
 
-    .f2 {
-        margin-top: -0px;
-        padding-bottom: 30px;
-        margin-left: -20px;
-
-    }
-
     .f2 h2 {
-        font-size: 14px;
+        padding-left: 60px;
+        font-size: 18px;
     }
 
     .f2 p {
-        font-size: 10px;
+        font-size: 14px;
+        padding-top: 10px;
+        width: auto;
+        margin-left: 50px;
     }
 
     .f3 {
-        margin-top: -10px;
+        margin-top: -40px;
     }
 
     .f3 ul {
@@ -292,7 +291,7 @@ footer .f4.in-view,
     }
 
     .f3 ul li {
-        padding: 30px 0;
+        padding: 20px 0;
     }
 
     .f5 h2 {
@@ -301,8 +300,13 @@ footer .f4.in-view,
     }
 
     .f6 {
+        display: flex;
         margin-top: -20px;
         margin-left: 185px;
+    }
+
+    .f6 i {
+        margin-top: 10px;
     }
 }
 

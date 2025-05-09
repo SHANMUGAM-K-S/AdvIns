@@ -7,16 +7,16 @@
 
 
 
-.sec {
+.sec img {
     width: 100%;
-    height: 90vh;
-    background-image: url(./assets/ins.png);
-    background-size: cover;
+    height: 100vh;
+    /* background-image: url(./assets/ins.png); */
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    margin-top: -20px;
+    background-position: center; */
+    /* margin-top: -20px; */
     overflow: hidden;
-    display: flex;
+    /* display: flex; */
     margin-top: 70px;
 }
 
@@ -43,7 +43,7 @@
 
 .text1 p {
     font-family: Poppins, sans-serif;
-    width: 340px;
+    width: auto;
     font-size: 20px;
 }
 
@@ -244,6 +244,10 @@
 }
 
 @media (max-width:1030px) {
+    .sec img {
+        height: 800px;
+    }
+
     .buttonss {
         position: fixed;
         bottom: 3%;
@@ -464,6 +468,12 @@
 
 
 @media (max-width:518px) {
+    .sec img {
+        height: 500px;
+        width: 500px;
+
+    }
+
     .buttonss {
         position: fixed;
         bottom: 1%;
@@ -487,10 +497,10 @@
         opacity: 1;
     }
 
-    .sec {
+    /* .sec {
         width: 100%;
         height: 30vh;
-    }
+    } */
 
     .cnt h1 {
         font-size: 1.8rem;

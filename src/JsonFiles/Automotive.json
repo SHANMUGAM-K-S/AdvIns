@@ -1,0 +1,51 @@
+{
+    "heading": "Automotive Services",
+    "planning": {
+        "sub-head": "Planning",
+        "sub-service": "Process Planning",
+        "sub-service2": "Layout Design",
+        "sub-service3": "Cycle Time",
+        "sub-service4": "Process Documents",
+        "sub-service5": "Weld Gun Study",
+        "sub-service6": "Ergonomic Study"
+    },
+    "layouts": {
+        "sub-head": "Layouts",
+        "sub-service": "SPM (Special Purpose Machines)",
+        "sub-service2": "Assembly Automation Robotics"
+    },
+    "designing": {
+        "sub-head": "Design and Drafting",
+        "sub-service": "Geo & Re-Spot Fixtures",
+        "sub-service2": "Hemming Fixtures",
+        "sub-service3": "Checking Fixtures",
+        "sub-service4": "Arc/Lase Welding Fixtures",
+        "sub-service5": "Material Handling / End Effectors /",
+        "sub-service6": "Combo Grippers",
+        "sub-service7": "Conveyor & Pallet",
+        "sub-service8": "Miscellaneous Fixtures (Pedestal, Glue Stand, Passtable etc...)"
+    },
+    "robotic": {
+        "sub-head": "Robotic Simulation",
+        "sub-service": "Cell Building",
+        "sub-service2": "Weld Points & product data importing",
+        "sub-service3": "Weld Gun Selections",
+        "sub-service4": "Robotic Reach Study",
+        "sub-service5": "Tool Validation",
+        "sub-service6": "Kinematics",
+        "sub-service7": "SOP (Sequence Of Operation)",
+        "sub-service8": "OLP (Off-Line Programming)"
+    },
+    "document": {
+        "sub-head": "Documents",
+        "sub-service": "Validation (Clamp, Gripper, Turntable etc...)",
+        "sub-service2": "Cycle Time & Spot Plan Creation",
+        "sub-service3": "Pneumatic Drawings",
+        "sub-service4": "Sequence Sheet",
+        "sub-service5": "PLP Plan & SHIM Plan",
+        "sub-service6": "Panel Flor / Joining Process",
+        "sub-service7": "Ergo Documents",
+        "sub-service8": "Poka-Yoke",
+        "sub-service9": "Long Lead / BOP"
+    }
+}
